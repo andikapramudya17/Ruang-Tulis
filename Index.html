@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gudang Kesalahan MUF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="logo" data-page="home">Ruang Tulis</a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#weekly" data-page="weekly">Weekly Notes</a>
+      <a href="#monthly" data-page="monthly">Monthly Essays</a>
+      <a href="#archive" data-page="archive">Archive</a>
+      <a href="#about" data-page="about">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="container hero">
+        <p class="eyebrow">Personal Blog</p>
+        <h1>Catatan Mingguan & Opini Bulanan</h1>
+        <p class="hero-text">
+          Tulisan santai tentang hal-hal yang saya pikirkan, pelajari, dan amati
+          dari minggu ke minggu. Tempat untuk menulis pelan, membaca ulang, dan
+          merapikan isi kepala.
+        </p>
+        <a href="#article" class="text-link" data-page="article">
+          Baca tulisan terbaru →
+        </a>
+      </div>
+
+      <div class="container section">
+        <div class="section-header">
+          <h2>Tulisan Terbaru</h2>
+          <p>Catatan dan esai yang baru saya publish.</p>
+        </div>
+
+        <div class="post-list">
+          <article class="post-card">
+            <p class="post-meta">25 April 2026 · Weekly Notes</p>
+            <h3>
+              <a href="#article" data-page="article">
+                Tentang Fokus yang Sulit Dijaga
+              </a>
+            </h3>
+            <p>
+              Minggu ini saya banyak memikirkan soal ritme kerja, distraksi kecil,
+              dan kenapa fokus terasa semakin mahal.
+            </p>
+            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
+          </article>
+
+          <article class="post-card">
+            <p class="post-meta">30 Maret 2026 · Monthly Essay</p>
+            <h3>
+              <a href="#article" data-page="article">
+                Internet yang Terlalu Ramai
+              </a>
+            </h3>
+            <p>
+              Sebuah refleksi tentang perhatian, informasi yang berlebihan, dan
+              keinginan untuk hidup sedikit lebih pelan.
+            </p>
+            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
+          </article>
+
+          <article class="post-card">
+            <p class="post-meta">18 Maret 2026 · Weekly Notes</p>
+            <h3>
+              <a href="#article" data-page="article">
+                Beberapa Hal Kecil yang Terasa Penting
+              </a>
+            </h3>
+            <p>
+              Tentang buku yang belum selesai, meja kerja yang berantakan, dan
+              catatan kecil yang justru sering menyelamatkan hari.
+            </p>
+            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="container quote-section">
+        <blockquote>
+          “Menulis adalah cara saya merapikan isi kepala.”
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- WEEKLY -->
+    <section id="weekly" class="page">
+      <div class="container page-title">
+        <p class="eyebrow">Routine Writing</p>
+        <h1>Weekly Notes</h1>
+        <p>
+          Catatan singkat setiap minggu tentang hal yang saya baca, pikirkan,
+          kerjakan, dan pelajari.
+        </p>
+      </div>
+
+      <div class="container post-list">
+        <article class="post-card">
+          <p class="post-meta">25 April 2026 · 4 menit baca</p>
+          <h3><a href="#article" data-page="article">Weekly Notes #04 — Tentang Fokus yang Sulit Dijaga</a></h3>
+          <p>Catatan tentang ritme kerja, distraksi, dan ruang tenang yang semakin sulit ditemukan.</p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">18 April 2026 · 5 menit baca</p>
+          <h3><a href="#article" data-page="article">Weekly Notes #03 — Hal Kecil yang Menyelamatkan Hari</a></h3>
+          <p>Beberapa hal sederhana yang membantu saya kembali merasa utuh minggu ini.</p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">11 April 2026 · 3 menit baca</p>
+          <h3><a href="#article" data-page="article">Weekly Notes #02 — Membaca Ulang Kebiasaan</a></h3>
+          <p>Refleksi pendek tentang kebiasaan kecil yang diam-diam membentuk hari.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MONTHLY -->
+    <section id="monthly" class="page">
+      <div class="container page-title">
+        <p class="eyebrow">Longform Writing</p>
+        <h1>Monthly Essays</h1>
+        <p>
+          Tulisan yang lebih panjang dan pelan. Biasanya berisi opini, refleksi,
+          atau rangkuman pemikiran dalam satu bulan.
+        </p>
+      </div>
+
+      <div class="container post-list">
+        <article class="post-card featured">
+          <p class="post-meta">April 2026 · 9 menit baca</p>
+          <h3><a href="#article" data-page="article">Mengapa Kita Sulit Berhenti Mengejar Produktivitas</a></h3>
+          <p>
+            Sebuah tulisan tentang ambisi, kelelahan, dan cara kita sering salah
+            memahami arti produktif.
+          </p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">Maret 2026 · 8 menit baca</p>
+          <h3><a href="#article" data-page="article">Internet, Perhatian, dan Keinginan untuk Pelan</a></h3>
+          <p>Refleksi tentang bagaimana internet membentuk cara kita memperhatikan dunia.</p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-meta">Februari 2026 · 7 menit baca</p>
+          <h3><a href="#article" data-page="article">Catatan tentang Kebiasaan Membaca</a></h3>
+          <p>Tentang membaca bukan sebagai target, tapi sebagai cara tinggal lebih lama bersama pikiran.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARCHIVE -->
+    <section id="archive" class="page">
+      <div class="container page-title">
+        <p class="eyebrow">All Writings</p>
+        <h1>Archive</h1>
+        <p>Semua tulisan tersusun rapi berdasarkan bulan dan kategori.</p>
+      </div>
+
+      <div class="container archive">
+        <div class="archive-filter">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="weekly">Weekly</button>
+          <button class="filter-btn" data-filter="monthly">Monthly</button>
+          <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+
+        <div class="archive-group">
+          <h2>April 2026</h2>
+          <ul>
+            <li data-category="weekly">
+              <span>25 Apr</span>
+              <a href="#article" data-page="article">Weekly Notes #04 — Tentang Fokus yang Sulit Dijaga</a>
+            </li>
+            <li data-category="monthly">
+              <span>20 Apr</span>
+              <a href="#article" data-page="article">Mengapa Kita Sulit Berhenti Mengejar Produktivitas</a>
+            </li>
+            <li data-category="personal">
+              <span>11 Apr</span>
+              <a href="#article" data-page="article">Merapikan Meja, Merapikan Pikiran</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="archive-group">
+          <h2>Maret 2026</h2>
+          <ul>
+            <li data-category="monthly">
+              <span>30 Mar</span>
+              <a href="#article" data-page="article">Internet, Perhatian, dan Keinginan untuk Pelan</a>
+            </li>
+            <li data-category="weekly">
+              <span>18 Mar</span>
+              <a href="#article" data-page="article">Weekly Notes #03 — Beberapa Hal Kecil</a>
+            </li>
+            <li data-category="weekly">
+              <span>07 Mar</span>
+              <a href="#article" data-page="article">Weekly Notes #02 — Membaca Ulang Kebiasaan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="container article-body">
+        <p class="eyebrow">About</p>
+        <h1>Halo, saya menulis di sini.</h1>
+
+        <p>
+          Blog ini adalah tempat saya menyimpan catatan mingguan, opini bulanan,
+          dan hal-hal yang sedang saya pikirkan. Tidak semuanya harus selesai.
+          Tidak semuanya harus besar. Kadang tulisan kecil pun cukup untuk
+          membuat sesuatu terasa lebih jelas.
+        </p>
+
+        <p>
+          Saya menulis tentang kehidupan sehari-hari, teknologi, buku,
+          produktivitas, internet, dan refleksi personal. Gaya tulisannya santai,
+          pelan, dan sebisa mungkin jujur.
+        </p>
+
+        <h2>Topik yang sering muncul</h2>
+        <ul>
+          <li>Refleksi mingguan</li>
+          <li>Opini tentang internet dan teknologi</li>
+          <li>Buku dan kebiasaan membaca</li>
+          <li>Produktivitas yang manusiawi</li>
+          <li>Catatan personal</li>
+        </ul>
+
+        <p>
+          Kamu bisa menghubungi saya melalui
+          <a href="#">email</a>,
+          <a href="#">Instagram</a>, atau
+          <a href="#">LinkedIn</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLE PAGE -->
+    <section id="article" class="page">
+      <article class="container article-body">
+        <a href="#home" class="back-link" data-page="home">← Kembali ke Home</a>
+
+        <p class="eyebrow">Weekly Notes</p>
+        <h1>Tentang Fokus yang Sulit Dijaga</h1>
+
+        <p class="article-meta">
+          25 April 2026 · 8 menit baca · Ditulis oleh Ruang Tulis
+        </p>
+
+        <p class="lead">
+          Minggu ini saya banyak memikirkan soal fokus. Bukan fokus dalam arti
+          produktivitas yang kaku, tapi fokus sebagai kemampuan untuk hadir
+          penuh pada satu hal tanpa terus-menerus ingin kabur ke hal lain.
+        </p>
+
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=80"
+            alt="Meja kerja minimalis"
+          />
+          <figcaption>Meja yang tenang kadang membantu pikiran ikut pelan.</figcaption>
+        </figure>
+
+        <h2>Ruang yang terlalu ramai</h2>
+
+        <p>
+          Saya merasa perhatian kita sekarang seperti ruangan kecil yang terlalu
+          banyak diisi barang. Ada pekerjaan, pesan singkat, notifikasi, daftar
+          bacaan, video pendek, dan rencana yang belum sempat dimulai.
+        </p>
+
+        <p>
+          Di tengah semua itu, menulis menjadi semacam latihan untuk tinggal
+          lebih lama dengan satu pikiran. Tidak selalu mudah, tapi sering kali
+          membantu. Saya suka membaca tulisan tentang
+          <a href="#">digital minimalism</a> dan bagaimana orang mencoba
+          mengambil kembali kendali atas waktunya.
+        </p>
+
+        <blockquote>
+          “Kadang yang kita butuhkan bukan lebih banyak rencana, tapi lebih
+          sedikit gangguan.”
+        </blockquote>
+
+        <h2>Menulis sebagai cara memperlambat</h2>
+
+        <p>
+          Ketika menulis, saya dipaksa untuk memperlambat pikiran. Kalimat tidak
+          bisa berlari secepat isi kepala. Ia harus dipilih, disusun, lalu
+          diperiksa kembali. Proses ini membuat saya sadar bahwa tidak semua hal
+          perlu segera direspons.
+        </p>
+
+        <p>
+          Mungkin itu alasan saya ingin menjaga blog ini tetap sederhana. Tidak
+          banyak warna, tidak banyak elemen yang berebut perhatian, tidak banyak
+          tombol. Hanya tulisan, ruang kosong, beberapa gambar, dan tautan yang
+          memang relevan.
+        </p>
+
+        <h2>Catatan kecil minggu ini</h2>
+
+        <ul>
+          <li>Membaca pelan lebih menyenangkan daripada membaca banyak.</li>
+          <li>Meja yang rapi tidak selalu membuat hidup rapi, tapi membantu.</li>
+          <li>Notifikasi kecil bisa mengubah arah satu hari penuh.</li>
+          <li>Menulis mingguan terasa seperti menyapu lantai pikiran.</li>
+        </ul>
+
+        <p>
+          Saya belum menemukan cara sempurna untuk menjaga fokus. Tapi mungkin
+          memang bukan itu tujuannya. Mungkin yang penting adalah terus kembali,
+          setiap kali perhatian kita pergi terlalu jauh.
+        </p>
+
+        <div class="article-nav">
+          <a href="#article" data-page="article">← Tulisan sebelumnya</a>
+          <a href="#article" data-page="article">Tulisan berikutnya →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ruang Tulis. Dibuat untuk menulis pelan.</p>
+    <div>
+      <a href="#">RSS</a>
+      <a href="#">Email</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
