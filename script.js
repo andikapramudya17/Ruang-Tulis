@@ -69,6 +69,7 @@ themeToggle.addEventListener("click", () => {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
+    const currentArchiveItems = document.querySelectorAll(".archive-group li");
 
     filterButtons.forEach((btn) => {
       btn.classList.remove("active");
@@ -76,7 +77,7 @@ filterButtons.forEach((button) => {
 
     button.classList.add("active");
 
-    archiveItems.forEach((item) => {
+    currentArchiveItems.forEach((item) => {
       const category = item.dataset.category;
 
       if (filter === "all" || category === filter) {
