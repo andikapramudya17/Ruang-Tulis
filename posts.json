@@ -1,5 +1,12 @@
 [
   {
+    "title": "SBMPTN",
+    "date": "2026-05-02",
+    "category": "Monthly Essay",
+    "excerpt": "Catatan tentang pendidikan, ujian masuk kampus, dan tekanan yang sering dialami pelajar.",
+    "file": "posts/sbmptn.md"
+  },
+  {
     "title": "Contoh Tulisan Pertama",
     "date": "2026-05-01",
     "category": "Weekly Notes",
