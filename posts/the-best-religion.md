@@ -1,4 +1,4 @@
-![[religion1.jpg]]
+![Ilustrasi Agama](../images/religion-1.jpg)
 
 Keberagaman merupakan suatu hal yang lumrah terdapat dalam kehidupan manusia dan merupakan wujud keindahan aktual yang diciptakan oleh Tuhan agar manusia saling mengenal satu sama lain dalam membentuk peradaban semesta. 
 
@@ -10,13 +10,13 @@ Lalu bagaimana jika setiap agama memiliki statement jika agamanya lah yang palin
 
 Islam mengaklaim, bahwa Islam adalah satu-satunya agama yang diridhoi Allah (menurut umat Islam itu sendiri). Dan barang siapa yang tidak mengimaninya akan dianggap kafir dan ditempatkan di Neraka.
 
-![[religion2.png]]
+![Semua Agama Benar](../images/religion-2.png)
 
 Begitu juga dengan Kristen yang mengharuskan kita untuk mempercayai dan juga mengimani bahwa Yesus sebagai juru selamat.
 
 Hal inilah yg membuat banyak manusia skeptis akan keberadaan Tuhan itu sendiri dan memilih untuk tidak berafiliasi dengan agama manapun (agnostic) atau bahkan sampai pada titik yang lebih ekstrim bahwa Tuhan hanyalah sebuah imajiner (atheist) dan menganggap semua kitab adalah karya tangan manusia karena sampai sekarang Tuhan enggan menampakan dirinya seolah senang melihat konflik akan perbedaan agama.
 
-![[religion3.jpg]]
+![Atheist](../images/religion-3.jpg)
 
 Coba tanya umat Kristen, apakah mereka merasa bahwa ajaran mereka paling benar? Jelas, mereka pasti akan menyodorkan Alkitab yang memuat ayat klaim bahwa agama merekalah yang paling benar.
 
@@ -24,7 +24,7 @@ Coba temui orang Yahudi dan tanyakan apakah agama yang paling benar menurut mere
 
 Karena itu semua adalah Dogma.
 
-![[religion4.jpg]]
+![Dogma Agama](../images/religion-4.jpg)
 
 Dogma adalah keyakinan akan suatu kebenaran yang dianggap final dan tidak boleh dibantah. Tidak boleh ada keraguan. Jika ada bantahan, sanggahan, atau sekedar keraguan, maka anda akan mendapat sanksi berupa dosa yang mengantarkan anda kepada Neraka. Ini adalah sistem agar manusia tetap bertahan dan berpedoman terhadap dogma. Ini memberikan efek rasa takut untuk mempertanyakan, meragukan dan membantah dogma agama.
 
@@ -32,7 +32,7 @@ Itulah kenapa kita diajarkan agama sejak kecil, selain untuk memeluk agama yang 
 
 Selain itu, agama juga memiliki sanksi agar tidak ada orang yang berani meninggalkan ajaran agama tersebut (seperti Islam) akan diberi sanksi Hukuman Mati bagi siapa saja yang murtad/keluar dari agama Islam.
 
-![[religion5.png]]
+![Death Penalty](../images/religion-5.png)
 
 [Death Penalty for Apostasy](https://humanists.international/get-involved/resources/the-right-to-apostasy-in-the-world/)
 
@@ -56,7 +56,7 @@ Makin kesini makin banyak orang yang 'katanya' memiliki ilmu agama yang tinggi, 
 
 Namun, tak sedikit orang ketika baru saja mempelajari agama sudah berani meneriakan surga dan neraka seolah hakim Tuhan. Saya sendiri kerap mendengarkan dan bahkan mendapatkan perkataan orang-orang yang 'mengaku' Reallygius seolah mereka telah mempunyai sekavling tanah di Surga dan memiliki orang dalam yang telah mengantongi kuncinya.
 
-![[religion6.png]]
+![Bidah](../images/religion-6.png)
 
 Berikut adalah kata-kata yang keluar dari mulut orang yang 'mengaku' Reallygius :
 
@@ -79,7 +79,7 @@ Berikut adalah kata-kata yang keluar dari mulut orang yang 'mengaku' Reallygius 
 
 - **"Dika, kamu kok sholatnya tidak pernah tepat waktu? Kamu mau jadi kafir? Kalau mau ya sudah sana ke gereja saja sekalian!"**. Ini adalah kalimat yang membuat saya mengelus dada dan sangat emosi sekali. Sudahlah memang hanya dia pemegang kunci surga. Saya dan lainnya tidak! Sungguh bikin naik darah sekali!
 
-![[religion7.png]]
+![Jengkel](../images/religion-7.png)
 
 Beragama itu seharusnya makin terasah akal sehat dan sifat manusianya. Bukan malah mensabotase tugas Tuhan.
 
