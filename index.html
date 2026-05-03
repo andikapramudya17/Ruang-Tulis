@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andika Pramudya</title>
+  <title>Ruang Tulis</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <a href="#home" class="logo" data-page="home">Ruang Tulis</a>
 
-    <nav class="nav-menu" id="navMenu">
+    <nav class="nav-menu" id="navMenu" aria-label="Navigasi utama">
       <a href="#home" data-page="home">Home</a>
       <a href="#weekly" data-page="weekly">Weekly Notes</a>
       <a href="#monthly" data-page="monthly">Monthly Essays</a>
@@ -19,211 +19,85 @@
     </nav>
 
     <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <span id="themeIcon">🌙</span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema">
+        <span id="themeIcon">Dark</span>
       </button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        ☰
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu">
+        &#9776;
       </button>
     </div>
   </header>
 
   <main>
-    <!-- HOME -->
     <section id="home" class="page active">
       <div class="container hero">
         <p class="eyebrow">Private Notes</p>
-        <h1>Catatan Pribadi</h1>
+        <h1>Catatan pribadi, ditulis pelan.</h1>
         <p class="hero-text">
-          Tulisan santai tentang hal-hal yang saya pikirkan, pelajari, dan amati. Tempat untuk menulis pelan, membaca ulang, dan
-          merapikan isi kepala.
+          Ruang kecil untuk menyimpan opini, refleksi, dan hal-hal yang sedang saya pikirkan.
         </p>
-        <a href="#article" class="text-link" data-page="article">
-          Baca tulisan terbaru →
-        </a>
       </div>
 
       <div class="container section">
         <div class="section-header">
-          <h2>Tulisan Terbaru</h2>
-          <p>Catatan dan esai yang baru saya publish.</p>
+          <div>
+            <p class="eyebrow">Latest</p>
+            <h2>Tulisan Terbaru</h2>
+          </div>
+          <a href="#archive" class="text-link" data-page="archive">Lihat arsip</a>
         </div>
 
-        <div class="post-list" id="latestPosts"></div>
-          <article class="post-card">
-            <p class="post-meta">25 April 2026 · Weekly Notes</p>
-            <h3>
-              <a href="#article" data-page="article">
-                Tentang Fokus yang Sulit Dijaga
-              </a>
-            </h3>
-            <p>
-              Minggu ini saya banyak memikirkan soal ritme kerja, distraksi kecil,
-              dan kenapa fokus terasa semakin mahal.
-            </p>
-            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
-          </article>
-
-          <article class="post-card">
-            <p class="post-meta">30 Maret 2026 · Monthly Essay</p>
-            <h3>
-              <a href="#article" data-page="article">
-                Internet yang Terlalu Ramai
-              </a>
-            </h3>
-            <p>
-              Sebuah refleksi tentang perhatian, informasi yang berlebihan, dan
-              keinginan untuk hidup sedikit lebih pelan.
-            </p>
-            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
-          </article>
-
-          <article class="post-card">
-            <p class="post-meta">18 Maret 2026 · Weekly Notes</p>
-            <h3>
-              <a href="#article" data-page="article">
-                Beberapa Hal Kecil yang Terasa Penting
-              </a>
-            </h3>
-            <p>
-              Tentang buku yang belum selesai, meja kerja yang berantakan, dan
-              catatan kecil yang justru sering menyelamatkan hari.
-            </p>
-            <a href="#article" class="read-more" data-page="article">Baca selengkapnya →</a>
-          </article>
+        <div class="post-list compact" id="latestPosts">
+          <p class="empty-state">Memuat tulisan...</p>
         </div>
-      </div>
-
-      <div class="container quote-section">
-        <blockquote>
-          “Menulis adalah cara saya merapikan isi kepala.”
-        </blockquote>
       </div>
     </section>
 
-    <!-- WEEKLY -->
     <section id="weekly" class="page">
       <div class="container page-title">
         <p class="eyebrow">Routine Writing</p>
         <h1>Weekly Notes</h1>
-        <p>
-          Catatan singkat setiap minggu tentang hal yang saya baca, pikirkan,
-          kerjakan, dan pelajari.
-        </p>
+        <p>Catatan mingguan yang lebih ringan, pendek, dan dekat dengan hal sehari-hari.</p>
       </div>
 
-      <div class="container post-list">
-        <article class="post-card">
-          <p class="post-meta">25 April 2026 · 4 menit baca</p>
-          <h3><a href="#article" data-page="article">Weekly Notes #04 — Tentang Fokus yang Sulit Dijaga</a></h3>
-          <p>Catatan tentang ritme kerja, distraksi, dan ruang tenang yang semakin sulit ditemukan.</p>
-        </article>
-
-        <article class="post-card">
-          <p class="post-meta">18 April 2026 · 5 menit baca</p>
-          <h3><a href="#article" data-page="article">Weekly Notes #03 — Hal Kecil yang Menyelamatkan Hari</a></h3>
-          <p>Beberapa hal sederhana yang membantu saya kembali merasa utuh minggu ini.</p>
-        </article>
-
-        <article class="post-card">
-          <p class="post-meta">11 April 2026 · 3 menit baca</p>
-          <h3><a href="#article" data-page="article">Weekly Notes #02 — Membaca Ulang Kebiasaan</a></h3>
-          <p>Refleksi pendek tentang kebiasaan kecil yang diam-diam membentuk hari.</p>
-        </article>
+      <div class="container post-list" id="weeklyPosts">
+        <p class="empty-state">Memuat tulisan...</p>
       </div>
     </section>
 
-    <!-- MONTHLY -->
     <section id="monthly" class="page">
       <div class="container page-title">
         <p class="eyebrow">Longform Writing</p>
         <h1>Monthly Essays</h1>
-        <p>
-          Tulisan yang lebih panjang dan pelan. Biasanya berisi opini, refleksi,
-          atau rangkuman pemikiran dalam satu bulan.
-        </p>
+        <p>Tulisan yang lebih panjang dan pelan, biasanya berisi opini atau rangkuman pemikiran.</p>
       </div>
 
-      <div class="container post-list">
-        <article class="post-card featured">
-          <p class="post-meta">April 2026 · 9 menit baca</p>
-          <h3><a href="#article" data-page="article">Mengapa Kita Sulit Berhenti Mengejar Produktivitas</a></h3>
-          <p>
-            Sebuah tulisan tentang ambisi, kelelahan, dan cara kita sering salah
-            memahami arti produktif.
-          </p>
-        </article>
-
-        <article class="post-card">
-          <p class="post-meta">Maret 2026 · 8 menit baca</p>
-          <h3><a href="#article" data-page="article">Internet, Perhatian, dan Keinginan untuk Pelan</a></h3>
-          <p>Refleksi tentang bagaimana internet membentuk cara kita memperhatikan dunia.</p>
-        </article>
-
-        <article class="post-card">
-          <p class="post-meta">Februari 2026 · 7 menit baca</p>
-          <h3><a href="#article" data-page="article">Catatan tentang Kebiasaan Membaca</a></h3>
-          <p>Tentang membaca bukan sebagai target, tapi sebagai cara tinggal lebih lama bersama pikiran.</p>
-        </article>
+      <div class="container post-list" id="monthlyPosts">
+        <p class="empty-state">Memuat tulisan...</p>
       </div>
     </section>
 
-    <!-- ARCHIVE -->
     <section id="archive" class="page">
       <div class="container page-title">
         <p class="eyebrow">All Writings</p>
         <h1>Archive</h1>
-        <p>Semua tulisan tersusun rapi berdasarkan bulan dan kategori.</p>
+        <p>Semua tulisan yang tersedia di folder posts, tersusun dari yang terbaru.</p>
       </div>
 
       <div class="container archive">
-        <div class="archive-filter">
-          <button class="filter-btn active" data-filter="all">Semua</button>
-          <button class="filter-btn" data-filter="weekly">Weekly</button>
-          <button class="filter-btn" data-filter="monthly">Monthly</button>
-          <button class="filter-btn" data-filter="personal">Personal</button>
+        <div class="archive-filter" id="archiveFilter">
+          <button class="filter-btn active" type="button" data-filter="all">Semua</button>
+          <button class="filter-btn" type="button" data-filter="weekly">Weekly</button>
+          <button class="filter-btn" type="button" data-filter="monthly">Monthly</button>
+          <button class="filter-btn" type="button" data-filter="personal">Personal</button>
         </div>
 
-        <div id="archiveList"></div>
-      </div>
-          <h2>April 2026</h2>
-          <ul>
-            <li data-category="weekly">
-              <span>25 Apr</span>
-              <a href="#article" data-page="article">Weekly Notes #04 — Tentang Fokus yang Sulit Dijaga</a>
-            </li>
-            <li data-category="monthly">
-              <span>20 Apr</span>
-              <a href="#article" data-page="article">Mengapa Kita Sulit Berhenti Mengejar Produktivitas</a>
-            </li>
-            <li data-category="personal">
-              <span>11 Apr</span>
-              <a href="#article" data-page="article">Merapikan Meja, Merapikan Pikiran</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="archive-group">
-          <h2>Maret 2026</h2>
-          <ul>
-            <li data-category="monthly">
-              <span>30 Mar</span>
-              <a href="#article" data-page="article">Internet, Perhatian, dan Keinginan untuk Pelan</a>
-            </li>
-            <li data-category="weekly">
-              <span>18 Mar</span>
-              <a href="#article" data-page="article">Weekly Notes #03 — Beberapa Hal Kecil</a>
-            </li>
-            <li data-category="weekly">
-              <span>07 Mar</span>
-              <a href="#article" data-page="article">Weekly Notes #02 — Membaca Ulang Kebiasaan</a>
-            </li>
-          </ul>
+        <div id="archiveList">
+          <p class="empty-state">Memuat arsip...</p>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="page">
       <div class="container article-body">
         <p class="eyebrow">About</p>
@@ -250,31 +124,23 @@
           <li>Produktivitas yang manusiawi</li>
           <li>Catatan personal</li>
         </ul>
-
-        <p>
-          Kamu bisa menghubungi saya melalui
-          <a href="#">email</a>,
-          <a href="#">Instagram</a>, atau
-          <a href="#">LinkedIn</a>.
-        </p>
       </div>
     </section>
 
-   <!-- ARTICLE PAGE -->
-<section id="article" class="page">
-  <article class="container article-body" id="articleContent">
-    <a href="#home" class="back-link" data-page="home">← Kembali ke Home</a>
-    <p>Memuat artikel...</p>
-  </article>
-</section>
+    <section id="article" class="page">
+      <article class="container article-body" id="articleContent">
+        <a href="#home" class="back-link" data-page="home">&larr; Kembali ke Home</a>
+        <p>Memuat artikel...</p>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Ruang Tulis. Dibuat untuk menulis pelan.</p>
+    <p>&copy; 2026 Ruang Tulis. Dibuat untuk menulis pelan.</p>
     <div>
-      <a href="#">Telegram</a>
-      <a href="#">Email</a>
-      <a href="#">Instagram</a>
+      <a href="#weekly" data-page="weekly">Weekly</a>
+      <a href="#monthly" data-page="monthly">Monthly</a>
+      <a href="#archive" data-page="archive">Archive</a>
     </div>
   </footer>
 

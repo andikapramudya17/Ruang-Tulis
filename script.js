@@ -1,153 +1,131 @@
 const pages = document.querySelectorAll(".page");
-const navLinks = document.querySelectorAll("[data-page]");
 const navMenu = document.getElementById("navMenu");
 const menuToggle = document.getElementById("menuToggle");
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const archiveItems = document.querySelectorAll(".archive-group li");
+
+let posts = [];
+let activeFilter = "all";
 
 function showPage(pageId) {
+  const targetPage = document.getElementById(pageId) ? pageId : "home";
+
   pages.forEach((page) => {
-    page.classList.remove("active");
+    page.classList.toggle("active", page.id === targetPage);
   });
 
-  const targetPage = document.getElementById(pageId);
-
-  if (targetPage) {
-    targetPage.classList.add("active");
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
   document.querySelectorAll(".nav-menu a").forEach((link) => {
-    link.classList.remove("active");
-
-    if (link.dataset.page === pageId) {
-      link.classList.add("active");
-    }
+    link.classList.toggle("active", link.dataset.page === targetPage);
   });
 
   navMenu.classList.remove("open");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const pageId = link.dataset.page;
-
-    if (pageId) {
-      event.preventDefault();
-      history.pushState(null, "", `#${pageId}`);
-      showPage(pageId);
-    }
-  });
-});
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
-
 function setTheme(theme) {
-  if (theme === "dark") {
-    document.body.classList.add("dark");
-    themeIcon.textContent = "☀️";
-  } else {
-    document.body.classList.remove("dark");
-    themeIcon.textContent = "🌙";
-  }
+  const isDark = theme === "dark";
 
+  document.body.classList.toggle("dark", isDark);
+  themeIcon.textContent = isDark ? "Light" : "Dark";
   localStorage.setItem("theme", theme);
 }
 
-themeToggle.addEventListener("click", () => {
-  const isDark = document.body.classList.contains("dark");
-  setTheme(isDark ? "light" : "dark");
-});
+function sortPosts(postList) {
+  return [...postList].sort((a, b) => new Date(b.date) - new Date(a.date));
+}
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    const currentArchiveItems = document.querySelectorAll(".archive-group li");
+function getCategorySlug(category) {
+  const text = category.toLowerCase();
 
-    filterButtons.forEach((btn) => {
-      btn.classList.remove("active");
-    });
+  if (text.includes("weekly")) return "weekly";
+  if (text.includes("monthly")) return "monthly";
+  return "personal";
+}
 
-    button.classList.add("active");
+function formatDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00`);
 
-    currentArchiveItems.forEach((item) => {
-      const category = item.dataset.category;
-
-      if (filter === "all" || category === filter) {
-        item.classList.remove("hidden");
-      } else {
-        item.classList.add("hidden");
-      }
-    });
+  return date.toLocaleDateString("id-ID", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
   });
-});
+}
 
-window.addEventListener("popstate", () => {
-  const pageId = window.location.hash.replace("#", "") || "home";
-  showPage(pageId);
-});
+function shortDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00`);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return date.toLocaleDateString("id-ID", {
+    day: "numeric",
+    month: "short"
+  });
+}
 
-  if (savedTheme) {
-    setTheme(savedTheme);
-  } else {
-    setTheme(prefersDark ? "dark" : "light");
+function renderPostCard(post, index, options = {}) {
+  const compactClass = options.compact ? " post-card-compact" : "";
+
+  return `
+    <article class="post-card${compactClass}">
+      <div>
+        <p class="post-meta">${formatDate(post.date)} / ${post.category}</p>
+        <h3>
+          <a href="#article-${index}" data-post-index="${index}">
+            ${post.title}
+          </a>
+        </h3>
+        <p>${post.excerpt}</p>
+      </div>
+      <a href="#article-${index}" class="read-more" data-post-index="${index}">
+        Baca &rarr;
+      </a>
+    </article>
+  `;
+}
+
+function renderPostList(elementId, postList, emptyMessage, options = {}) {
+  const target = document.getElementById(elementId);
+
+  if (!target) return;
+
+  if (!postList.length) {
+    target.innerHTML = `<p class="empty-state">${emptyMessage}</p>`;
+    return;
   }
 
-  const pageId = window.location.hash.replace("#", "") || "home";
-  showPage(pageId);
-});
-
-let posts = [];
-
-async function loadPosts() {
-  try {
-    const response = await fetch("posts.json");
-    posts = await response.json();
-
-    renderLatestPosts();
-    renderArchive();
-  } catch (error) {
-    console.error("Gagal memuat posts.json:", error);
-  }
+  target.innerHTML = postList
+    .map((post) => renderPostCard(post, posts.indexOf(post), options))
+    .join("");
 }
 
 function renderLatestPosts() {
-  const latestPosts = document.getElementById("latestPosts");
+  renderPostList(
+    "latestPosts",
+    sortPosts(posts).slice(0, 3),
+    "Belum ada tulisan yang bisa ditampilkan.",
+    { compact: true }
+  );
+}
 
-  if (!latestPosts) return;
+function renderCategoryPosts() {
+  const weeklyPosts = sortPosts(posts).filter((post) => getCategorySlug(post.category) === "weekly");
+  const monthlyPosts = sortPosts(posts).filter((post) => getCategorySlug(post.category) === "monthly");
 
-  latestPosts.innerHTML = posts
-    .slice(0, 3)
-    .map((post, index) => {
-      return `
-        <article class="post-card">
-          <p class="post-meta">${formatDate(post.date)} · ${post.category}</p>
-          <h3>
-            <a href="#article-${index}" data-post-index="${index}">
-              ${post.title}
-            </a>
-          </h3>
-          <p>${post.excerpt}</p>
-          <a href="#article-${index}" class="read-more" data-post-index="${index}">
-            Baca selengkapnya →
-          </a>
-        </article>
-      `;
-    })
-    .join("");
+  renderPostList("weeklyPosts", weeklyPosts, "Belum ada Weekly Notes di folder posts.");
+  renderPostList("monthlyPosts", monthlyPosts, "Belum ada Monthly Essays di folder posts.");
+}
 
-  attachPostLinks();
+function groupPostsByMonth(postList) {
+  return postList.reduce((groups, post) => {
+    const date = new Date(`${post.date}T00:00:00`);
+    const month = date.toLocaleDateString("id-ID", {
+      month: "long",
+      year: "numeric"
+    });
+
+    if (!groups[month]) groups[month] = [];
+    groups[month].push(post);
+    return groups;
+  }, {});
 }
 
 function renderArchive() {
@@ -155,40 +133,72 @@ function renderArchive() {
 
   if (!archiveList) return;
 
-  archiveList.innerHTML = `
-    <div class="archive-group">
-      <h2>Semua Tulisan</h2>
-      <ul>
-        ${posts
-          .map((post, index) => {
-            return `
-              <li data-category="${getCategorySlug(post.category)}">
-                <span>${shortDate(post.date)}</span>
-                <a href="#article-${index}" data-post-index="${index}">
-                  ${post.title}
-                </a>
-              </li>
-            `;
-          })
-          .join("")}
-      </ul>
-    </div>
-  `;
+  const visiblePosts = sortPosts(posts).filter((post) => {
+    return activeFilter === "all" || getCategorySlug(post.category) === activeFilter;
+  });
 
-  attachPostLinks();
+  if (!visiblePosts.length) {
+    archiveList.innerHTML = "<p class=\"empty-state\">Belum ada tulisan untuk kategori ini.</p>";
+    return;
+  }
+
+  const groups = groupPostsByMonth(visiblePosts);
+
+  archiveList.innerHTML = Object.entries(groups)
+    .map(([month, monthPosts]) => {
+      return `
+        <div class="archive-group">
+          <h2>${month}</h2>
+          <ul>
+            ${monthPosts
+              .map((post) => {
+                const index = posts.indexOf(post);
+
+                return `
+                  <li>
+                    <span>${shortDate(post.date)}</span>
+                    <a href="#article-${index}" data-post-index="${index}">${post.title}</a>
+                    <small>${post.category}</small>
+                  </li>
+                `;
+              })
+              .join("")}
+          </ul>
+        </div>
+      `;
+    })
+    .join("");
 }
 
-function attachPostLinks() {
-  document.querySelectorAll("[data-post-index]").forEach((link) => {
-    link.addEventListener("click", async (event) => {
-      event.preventDefault();
+function renderAll() {
+  renderLatestPosts();
+  renderCategoryPosts();
+  renderArchive();
+}
 
-      const index = link.dataset.postIndex;
-      history.pushState(null, "", `#article-${index}`);
+function isAbsoluteOrSpecialUrl(value) {
+  return /^(?:[a-z][a-z\d+.-]*:|#|\/)/i.test(value);
+}
 
-      await loadArticle(index);
-      showPage("article");
-    });
+function resolveArticleAssets(articleContent, postFile) {
+  const lastSlash = postFile.lastIndexOf("/");
+  const postDirectory = lastSlash >= 0 ? postFile.slice(0, lastSlash + 1) : "";
+  const baseUrl = new URL(postDirectory, window.location.href);
+
+  articleContent.querySelectorAll("img").forEach((image) => {
+    const source = image.getAttribute("src");
+
+    if (source && !isAbsoluteOrSpecialUrl(source)) {
+      image.src = new URL(source, baseUrl).href;
+    }
+  });
+
+  articleContent.querySelectorAll("a").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (href && !isAbsoluteOrSpecialUrl(href)) {
+      link.href = new URL(href, baseUrl).href;
+    }
   });
 }
 
@@ -200,64 +210,114 @@ async function loadArticle(index) {
 
   try {
     const response = await fetch(post.file);
+
+    if (!response.ok) {
+      throw new Error(`Artikel tidak ditemukan: ${post.file}`);
+    }
+
     const markdown = await response.text();
     const html = marked.parse(markdown);
 
     articleContent.innerHTML = `
-      <a href="#home" class="back-link" data-page="home">← Kembali ke Home</a>
-
+      <a href="#home" class="back-link" data-page="home">&larr; Kembali ke Home</a>
       <p class="eyebrow">${post.category}</p>
       <h1>${post.title}</h1>
-
-      <p class="article-meta">
-        ${formatDate(post.date)} · Ditulis oleh Ruang Tulis
-      </p>
-
+      <p class="article-meta">${formatDate(post.date)} / Ruang Tulis</p>
       ${html}
     `;
 
-    const backLink = articleContent.querySelector("[data-page='home']");
-    if (backLink) {
-      backLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        history.pushState(null, "", "#home");
-        showPage("home");
-      });
-    }
+    resolveArticleAssets(articleContent, post.file);
+    showPage("article");
   } catch (error) {
     articleContent.innerHTML = `
-      <a href="#home" class="back-link" data-page="home">← Kembali ke Home</a>
-      <p>Artikel gagal dimuat.</p>
+      <a href="#home" class="back-link" data-page="home">&larr; Kembali ke Home</a>
+      <p class="empty-state">Artikel gagal dimuat. Periksa kembali nama file di posts.json.</p>
     `;
+    showPage("article");
     console.error("Gagal memuat artikel:", error);
   }
 }
 
-function formatDate(dateString) {
-  const date = new Date(dateString);
+function handleHash() {
+  const hash = window.location.hash.replace("#", "");
 
-  return date.toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
+  if (hash.startsWith("article-")) {
+    const index = Number(hash.replace("article-", ""));
+    loadArticle(index);
+    return;
+  }
+
+  showPage(hash || "home");
+}
+
+async function loadPosts() {
+  try {
+    const response = await fetch("posts.json");
+
+    if (!response.ok) {
+      throw new Error("posts.json tidak ditemukan");
+    }
+
+    posts = sortPosts(await response.json());
+    renderAll();
+    handleHash();
+  } catch (error) {
+    document.querySelectorAll(".empty-state").forEach((item) => {
+      item.textContent = "Daftar tulisan gagal dimuat.";
+    });
+    console.error("Gagal memuat posts.json:", error);
+  }
+}
+
+document.addEventListener("click", (event) => {
+  const postLink = event.target.closest("[data-post-index]");
+  const pageLink = event.target.closest("[data-page]");
+
+  if (postLink) {
+    event.preventDefault();
+    const index = Number(postLink.dataset.postIndex);
+    history.pushState(null, "", `#article-${index}`);
+    loadArticle(index);
+    return;
+  }
+
+  if (pageLink) {
+    event.preventDefault();
+    const pageId = pageLink.dataset.page;
+    history.pushState(null, "", `#${pageId}`);
+    showPage(pageId);
+  }
+});
+
+document.getElementById("archiveFilter").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-filter]");
+
+  if (!button) return;
+
+  activeFilter = button.dataset.filter;
+
+  document.querySelectorAll(".filter-btn").forEach((filterButton) => {
+    filterButton.classList.toggle("active", filterButton === button);
   });
-}
 
-function shortDate(dateString) {
-  const date = new Date(dateString);
+  renderArchive();
+});
 
-  return date.toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "short"
-  });
-}
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
 
-function getCategorySlug(category) {
-  const text = category.toLowerCase();
+themeToggle.addEventListener("click", () => {
+  const isDark = document.body.classList.contains("dark");
+  setTheme(isDark ? "light" : "dark");
+});
 
-  if (text.includes("weekly")) return "weekly";
-  if (text.includes("monthly")) return "monthly";
-  return "personal";
-}
+window.addEventListener("popstate", handleHash);
 
-loadPosts();
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  setTheme(savedTheme || (prefersDark ? "dark" : "light"));
+  loadPosts();
+});
