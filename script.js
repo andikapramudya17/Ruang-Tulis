@@ -26,7 +26,8 @@ function setTheme(theme) {
   const isDark = theme === "dark";
 
   document.body.classList.toggle("dark", isDark);
-  themeIcon.textContent = isDark ? "Light" : "Dark";
+  themeIcon.textContent = isDark ? "☀" : "☾";
+  themeToggle.setAttribute("aria-label", isDark ? "Gunakan tema terang" : "Gunakan tema gelap");
   localStorage.setItem("theme", theme);
 }
 
@@ -200,6 +201,17 @@ function resolveArticleAssets(articleContent, postFile) {
       link.href = new URL(href, baseUrl).href;
     }
   });
+
+  const blockquotes = articleContent.querySelectorAll("blockquote");
+  const closingQuote = blockquotes[blockquotes.length - 1];
+
+  if (closingQuote) {
+    closingQuote.classList.add("closing-quote");
+
+    if (closingQuote.nextElementSibling?.tagName === "HR") {
+      closingQuote.nextElementSibling.classList.add("after-closing-quote");
+    }
+  }
 }
 
 async function loadArticle(index) {

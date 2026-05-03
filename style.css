@@ -111,11 +111,15 @@ img {
   color: var(--text-muted);
   cursor: pointer;
   font: inherit;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .theme-toggle {
-  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 0;
 }
 
 .theme-toggle:hover,
@@ -394,6 +398,38 @@ p {
   border: 1px solid var(--border);
 }
 
+.article-body a:not(.back-link) {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--text) 45%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  background:
+    linear-gradient(
+      to top,
+      color-mix(in srgb, var(--surface-hover) 74%, transparent) 42%,
+      transparent 42%
+    );
+  border-radius: 3px;
+}
+
+.article-body a:not(.back-link):hover {
+  color: var(--text);
+  text-decoration-color: var(--text);
+  background:
+    linear-gradient(
+      to top,
+      color-mix(in srgb, var(--surface-hover) 100%, transparent) 58%,
+      transparent 58%
+    );
+}
+
+.article-body hr {
+  margin: 42px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
 .article-body blockquote {
   margin: 32px 0;
   padding: 8px 0 8px 18px;
@@ -403,6 +439,27 @@ p {
 
 .article-body blockquote p {
   color: var(--text-muted);
+}
+
+.article-body blockquote.closing-quote {
+  margin: 56px 0 28px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-left: 0;
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.article-body blockquote.closing-quote p {
+  margin: 10px 0;
+  color: var(--text);
+  font-size: clamp(21px, 3vw, 28px);
+  line-height: 1.55;
+}
+
+.article-body hr.after-closing-quote {
+  display: none;
 }
 
 .site-footer {
