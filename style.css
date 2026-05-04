@@ -5,6 +5,7 @@
   --border: #e6e4df;
   --surface: #f7f6f3;
   --surface-hover: #efeeeb;
+  --quote-bg: #f3f3f1;
   --link: #1f1f1f;
   --shadow: 0 16px 40px rgba(31, 31, 31, 0.06);
   --max-width: 760px;
@@ -20,6 +21,7 @@ body.dark {
   --border: #34312d;
   --surface: #211f1c;
   --surface-hover: #2a2723;
+  --quote-bg: #242424;
   --link: #f4f1ea;
   --shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 }
@@ -442,20 +444,20 @@ p {
 }
 
 .article-body blockquote.closing-quote {
-  margin: 56px 0 28px;
-  padding: 28px;
+  margin: 50px 0 26px;
+  padding: 24px 26px;
   border: 1px solid var(--border);
   border-left: 0;
   border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+  background: var(--quote-bg);
+  box-shadow: 0 10px 30px rgba(31, 31, 31, 0.04);
 }
 
 .article-body blockquote.closing-quote p {
-  margin: 10px 0;
+  margin: 8px 0;
   color: var(--text);
-  font-size: clamp(21px, 3vw, 28px);
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .article-body hr.after-closing-quote {
