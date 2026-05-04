@@ -91,8 +91,8 @@ Urusan surga-neraka itu kuasa Ilahi. Itu merupakan anugerah yang di atas. Siapal
 
 ---
 
-> "Memikirkan sesuatu itu lebih baik dari sekadar memercayainya".
+> _"Memikirkan sesuatu itu lebih baik dari sekadar memercayainya"._
 > 
-> "Meragukan sesuatu itu lebih baik dari pura-pura memahaminya".
+> _"Meragukan sesuatu itu lebih baik dari pura-pura memahaminya"._
 
 ---
