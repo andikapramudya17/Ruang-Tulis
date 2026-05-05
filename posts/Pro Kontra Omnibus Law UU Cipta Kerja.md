@@ -1,0 +1,73 @@
+# Pro Kontra Omnibus Law UU Cipta Kerja
+
+![ilustrasi hukum](../images/hukum-1.jpg)
+
+Omnibus Law merupakan sebuah UU yang dibuat untuk menyasar isu besar dan mungkin mencabut atau mengubah beberapa UU yang ada disuatu negara. Undang-undang ini dimaksudkan untuk merampingkan regulasi dari segi jumlah serta menyederhanakan peraturan agar lebih tepat sasaran. Sedangkan, UU Cipta Kerja hanya salah satu bagian dari Omnibus Law.
+
+Sebagai orang yang tidak setuju dengan kehadiran UU Cipta Kerja ini, saya akan menjelaskan beberapa poin krusial mengapa saya memilih untuk menolak UU Cipta Kerja.
+
+
+1. **Bukan buruh yang malas, namun pelaku usaha yang sebenarnya malas**
+
+Buruh sudah bekerja belasan jam kok dibilang malas. Haruskah mereka bekerja 24 jam non-stop agar tidak dibilang pemalas? Bukannya yang pemalas itu yang tidur saat rapat?? (oops!).
+
+Buruh kita tidak pemalas, hanya saja kompetensinya sangat rendah. Karena didominasi oleh lulusan SMP kebawah. Sebenarnya pemerintah mengakui sendiri, dan mengatakan bahwa perihal ini bisa diatasi dengan cara memberikan pelatihan/pendidikan kerja. Tapi banyak perusahaan malas menjalankannya. 
+
+Baru 10% perusahaan saja yang komitmen memberikan pelatihan kerja. Sisanya tidak. Dan pemberian pelatihan kerja dari pengusaha kita itu terendah di ASEAN! Kalah dengan Vietnam yang mencapai 20%.
+
+
+2. **Tanpa adanya UU Cipta Kerja pun investasi tetap naik**
+
+Dikutip lansung dari web Setkab RI :
+
+_“Sepanjang semester I tahun 2020, jumlah investasi sector industry mengalami peningkatan hingga Rp129,6 triliun naik 23,9 persen dibandingan capaian pada periode yang sama tahun 2019 sebesar Rp104,6 triliun.”_
+
+Memang didominasi oleh Penanaman Modal Dalam Negeri (PMDN). Investasi asing menurun. Tetapi itu bukanlah masalah. Makanya saya heran dan gagal paham dengan yang bilang “UU CK harus segera disahkan agar investasi meningkat.” Tanpa UU CK pun, investasi sudah meningkat kok.
+
+Dan total penyerapan tenaga kerja pun meningkat.
+
+_“Total penyerapan Tenaga Kerja Indonesia (TKI) juga mengalami peningkatan dari periode sebelumnya. Saat ini penyerapan TKI sebanyak 303.085 pekerja sementara tahun lalu sebesar 235.401 pekerja.”_
+
+Jadi, kita tidak punya masalah sebenarnya dibidang penanaman modal/investasi.
+
+
+3. **Strict liability bagi pengusaha untuk menjaga lingkungan dihapus**
+
+Pasal 88 UU PPLH dimodifikasi. Dulunya berbunyi :
+
+_“Setiap orang yang tindakannya, usahanya, dan atau kegiatannya menggunakan B3 (Bahan Berbahaya dan Beracun), menghasilkan dan/atau mengelola limbah B3, dan/atau yang menimbulkan ancaman serius terhadap lingkungan hidup bertanggung jawab mutlak atas kerugian yang terjadi **tanpa perlu pembuktian unsur kesalahan**.”_
+
+Bagian yang digaris tebal sudah dihapus. Artinya, semakin susah bagi penggugat untuk menuntut ganti rugi dari pengusaha yang merusak lingkungan.
+
+
+4. **TKA semakin mudah untuk bekerja di Indonesia**
+
+Pasal 42 UU Ketenagakerjaan mengenai kewajiban memiliki izin tertulis bagi perusahaan yang ingin menggunakan TKA dihapus dan diganti. Masalahnya, izin tertulis itu memuat data berupa : informasi terkait periode penugasan ekspatriat dan penunjukan TKI sebagai mitra kerja ekspatriat nantinya. Dan izin tertulis harus disahkan oleh menteri.
+
+Sekarang? Cukup bikin rencana penggunaan yang disahkan di pemerintah pusat saja.
+
+Masalahnya adalah, ribuan TKA di negara kita itu illegal. Mereka datang menggunakan visa turis dan tidak membayar pajak ke pemerintah kita. Tapi beberapa pengusaha ‘nakal’ suka sama TKA ini. Pengusaha tidak mau mengakui bahwa mereka memperkerjakan TKA illegal.
+
+Saya juga bertanya-tanya satu hal, kenapa para wakil rakyat terburu-buru sekali mengesahkan UU Cipta Kerja ditengah pandemi??
+
+Oleh sebab itu, UU ini yang paling banyak jadi sorotan publik sehingga menyebabkan berbagai elemen masyarakat khsusnya buruh dan mahasiswa melakukan demonstrasi untuk menuntut keadilan. Namun, sebagai orang yang kontra terhadap UU ini, saya pribadi tidak sampai ikut turun kejalan menyuarakan hak-hak rakyat seperti yang dilakukan kebanyakan mahasiswa pada umumnya dikarenakan beberapa hal berikut :
+
+- Kondisi sekarang kasus positif Covid-19 semakin meningkat. Mereka berkoar demo turun ke jalan "Demi kepentingan rakyat" katanya, tetapi bukankah mereka justru membahayakan rakyat dengan melakukan demo dengan banyaknya orang yang turun ke jalan??
+
+- Saya sadar diri. Bagi saya demo adalah tanggung jawab yang berat. Coba bayangkan betapa malunya saya saat terluka ataupun tertangkap oleh pihak aparat dan saat saya di introgasi saya tidak punya jawaban yang berbobot. Masa saya jawab ' Karena DPR itu penghianat, buruh itu harus di perjuangkan'. Saya pasti akan sangat malu jika diketawakan karena alasan polos yang mewakili kebodohan. Takut terlihat Kebodohannya. Makanya saya perlu untuk memahami dan terus belajar.
+
+- Kebanyakan dari kita seolah bangga ikut demo dan menganggapnya sebagai prestasi yang bisa dijadikan bahan cerita kepada anak cucu kita, padahal di atas semua itu kita bisa cari hal lain sebagai prestasi yang lebih membanggakan. Mau bangga ikut demo tapi kuliah saja masih suka titip absen ke teman. :))
+
+- Saya melihat di berbagai sosial media bahwa ikut demo hanyalah ajang ikut-ikutan tanpa tahu esensinya. Mereka ikut demo hanya biar bisa buat insta story, ikut demo biar keliatan keren, ikut demo karena diajak tanpa tahu apa maksud dan tujuan kenapa melakukan demo.
+
+---
+
+**Referensi:**
+
+[UU Cipta Kerja 2020](https://drive.google.com/file/d/10cAd9XMYOfANs1_cOr0Wz119l_Vfu3WJ/view?usp=drivesdk)
+
+[Daftar Pasal UU Omnibus Law Cipta Kerja yang Bisa Merugikan Buruh – Tirto.id](https://www.google.co.id/amp/s/amp.tirto.id/daftar-pasal-uu-omnibus-law-cipta-kerja-yang-bisa-merugikan-buruh-f5Cb)
+
+[Naik 23,9% disemester I-2020, Jumlah Investasi Sektor Industri Meningkat Rp129,6 Triliun – Sekretariat Kabinet Republik Indonesia](https://setkab.go.id/naik-239-di-semester-i-2020-jumlah-investasi-sektor-industri-meningkat-rp1296-triliun/)
+
+[Meski Ada Corona, Investasi Masuk ke Indonesia Naik 8 Persen](https://www.suara.com/bisnis/2020/04/20/151552/meski-ada-corona-investasi-masuk-ke-indonesia-naik-8-persen)
