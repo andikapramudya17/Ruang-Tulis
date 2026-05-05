@@ -138,11 +138,11 @@ Keputusan mereka jauh lebih baik daripada orang-orang yang memaksakan diri untuk
 
 ---
 
-_"Anak bukan seperti padi yang waktu kecil ditanam, diberi pupuk, ketika sudah matang dipetik dan diambil gabahnya. Seharusnya anak itu seperti sebuah bunga yang waktu kecil ditanam, diberi pupuk yang terbaik, ketika sudah mekar dinikmati dari kejauhan._
-
-_Membiarkannya menebarkan wangi dan keindahan di sekitarnya."_
-
-
-_~Andika Pramudya~_
+>_"Anak bukan seperti padi yang waktu kecil ditanam, diberi pupuk, ketika sudah matang dipetik dan diambil gabahnya. Seharusnya anak itu seperti sebuah bunga yang waktu kecil ditanam, diberi pupuk yang terbaik, ketika sudah mekar dinikmati dari kejauhan._
+>
+>_Membiarkannya menebarkan wangi dan keindahan di sekitarnya."_
+>
+>
+>~ _Andika Pramudya_ ~
 
 ![padang bunga mawar](../images/childfree-7.jpg)
